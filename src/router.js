@@ -68,4 +68,11 @@ const router = createRouter({
   routes: routes
 })
 
+router.beforeEach((to, from) => {
+  // metodo executado antes do acesso ao destino
+  console.log("Origem", from)
+  console.log("Destino", to)
+  // verificar se o user está autorizado a acessar a rota
+  
+})
 export default router

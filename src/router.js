@@ -68,6 +68,17 @@ const routes =[
 
 const router = createRouter({
   history: createWebHistory(),
+  scrollBehavior(to, from, savePosition) { // scroll na pagina em secoes
+    if(savePosition) { // volta pra posicao anterior ao clicar no back do browser
+      return savePosition;
+    }
+
+    // verifica se tem um #secao na url
+    if(to.hash) {
+      return { el: to.hash } // el é o id de um elemento html (#secao1)
+    }
+    return { left: 0, top: 0 } // left= x; top = y
+  },
   routes: routes
 })
 

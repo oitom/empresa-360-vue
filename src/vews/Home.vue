@@ -2,11 +2,11 @@
   <div>
     <nav class="navbar navbar-light bg-light menu-superior">
       <div class="container">
-        <router-link class="navbar-brand" to="/home">Empresa 360</router-link>
+        <router-link class="navbar-brand abtn" to="/home">Empresa 360</router-link>
         <div class="navbar-nav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <router-link class="nav-link" to="/">Sair</router-link>
+              <router-link class="nav-link obtn" to="/">Sair</router-link>
             </li>
           </ul>
         </div>
@@ -81,5 +81,13 @@
   bottom: 0;
   width: 100%;
   background-color: #CCC;
+}
+.abtn {
+    color: #0d6efd;
+    font-weight: bold;
+}
+.obtn {
+    color: #ed5275;
+    font-weight: bold;
 }
 </style>

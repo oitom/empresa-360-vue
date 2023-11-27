@@ -2,11 +2,11 @@
   <div>
     <nav class="navbar navbar-light bg-light menu-superior">
       <div class="container">
-        <a class="navbar-brand" href="#">Empresa 360</a>
+        <a class="navbar-brand abtn" href="#">Empresa 360</a>
         <div class="navbar-nav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <router-link class="nav-link" to="/">Voltar</router-link>
+              <router-link class="nav-link abtn" to="/">Voltar</router-link>
             </li>
           </ul>
         </div>
@@ -43,3 +43,9 @@ export default {
   }
 }
 </script>
+<style>
+.abtn {
+    color: #0d6efd;
+    font-weight: bold;
+}
+</style>

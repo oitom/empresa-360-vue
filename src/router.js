@@ -1,19 +1,24 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '@/vews/Home.vue'
-import Login from '@/vews/Login.vue'
-import PaginaNaoEncontrada from '@/vews/PaginaNaoEncontrada.vue'
-import Site from '@/vews/Site.vue'
-import Vendas from '@/components/vendas/Vendas.vue'
-import Servicos from '@/components/servicos/Servicos.vue'
-import Servico from '@/components/servicos/Servico.vue'
-import Leads from '@/components/vendas/Leads.vue'
-import Lead from '@/components/vendas/Lead.vue'
-import Contratos from '@/components/vendas/Contratos.vue'
-import Dashboard from '@/components/dashboard/Dashboard.vue'
-import DashboardRodape from '@/components/dashboard/DashboardRodape.vue'
-import VendasPadrao from '@/components/vendas/VendasPadrao.vue'
-import Opcoes from '@/components/servicos/Opcoes.vue'
-import Indicadores from '@/components/servicos/Indicadores.vue'
+
+// sem lazy loading
+// import Contratos from '@/components/vendas/Contratos.vue'
+
+// com lazy loading
+const Contratos = () => import('@/components/vendas/Contratos.vue')
+const Dashboard = () => import('@/components/dashboard/Dashboard.vue')
+const DashboardRodape = () => import('@/components/dashboard/DashboardRodape.vue')
+const Home = () => import('@/vews/Home.vue')
+const Indicadores = () => import('@/components/servicos/Indicadores.vue')
+const Leads = () => import('@/components/vendas/Leads.vue')
+const Lead = () => import('@/components/vendas/Lead.vue')
+const Login = () => import('@/vews/Login.vue')
+const Opcoes = () => import('@/components/servicos/Opcoes.vue')
+const PaginaNaoEncontrada = () => import('@/vews/PaginaNaoEncontrada.vue')
+const Servicos = () => import('@/components/servicos/Servicos.vue')
+const Servico = () => import('@/components/servicos/Servico.vue')
+const Site = () => import('@/vews/Site.vue')
+const Vendas = () => import('@/components/vendas/Vendas.vue')
+const VendasPadrao = () => import('@/components/vendas/VendasPadrao.vue')
 
 const routes =[
   {

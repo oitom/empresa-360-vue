@@ -1,10 +1,14 @@
 # empresa-360
+Login e dashboard para empresas em VueJs
 
 ## Project setup
 ```
 npm install
 ```
-
+## Put json server online
+```
+json-server --watch json-server.json
+```
 ### Compiles and hot-reloads for development
 ```
 npm run serve
@@ -28,6 +32,3 @@ npm i vue-router@4.0.12 --save -E
 
 ### Install json server
 npm i -g json-server
-
-### Colocar o json server online
-json-server --watch json-server.json

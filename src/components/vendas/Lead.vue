@@ -34,6 +34,17 @@ export default {
   mixins: [ApiMixin],
   created() {
     this.getDadosApi(`http://localhost:3000/leads/${this.$route.params.id}`)
+  },
+  beforeRouteEnter() {
+    // to, from, next
+    // executa antes de acessar a rota
+  },
+  beforeRouteLeave() {
+    // to, from, next
+    // executa antes de deixar a rota e ir para a prox
+    // ex.: salvar dados antes de mudar de rota ou alertar que pode perder as alterações
+    const confirmar = window.confirm("Deseja sair do formulário?")
+    return confirmar
   }
 }
 </script>

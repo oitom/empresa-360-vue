@@ -18,10 +18,12 @@ import Indicadores from '@/components/servicos/Indicadores.vue'
 const routes =[
   {
     path: '/', //localhost
-    component: Site
+    component: Site,
+    meta: { requerAutorizacao: false }
   },
   {
     path: '/home', //localhost/home
+    meta: { requerAutorizacao: true },
     alias: '/app',
     component: Home,
     children: [
@@ -54,6 +56,7 @@ const routes =[
   },
   {
     path: '/login',
+    meta: { requerAutorizacao: false },
     component: Login
   },
   {
@@ -68,11 +71,22 @@ const router = createRouter({
   routes: routes
 })
 
-router.beforeEach((to, from) => {
-  // metodo executado antes do acesso ao destino
-  console.log("Origem", from)
-  console.log("Destino", to)
+// metodo executado antes do acesso ao destino
+router.beforeEach((to) => {
+  // console.log("Rota Destino: ", to.meta); // meta: { requerAutorizacao: true }
   // verificar se o user está autorizado a acessar a rota
-  
-})
+  // if(to.meta.requerAutorizacao) {
+    // console.log("Valida o acesso")
+  // }
+  // else { 
+    // console.log("Segue sem validar a autorizacao")
+  // }
+});
+
+// metodo executado após a conclusão da navegação
+router.afterEach((to, from)=> {
+  // console.log("origem ", from)
+  // console.log("destino", to)
+});
+
 export default router

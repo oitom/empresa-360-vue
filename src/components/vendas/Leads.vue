@@ -34,6 +34,6 @@ export default {
   mixins: [ApiMixin],
   created() {
     this.getDadosApi('http://localhost:3000/leads');
-  }
+  },
 }
 </script>
